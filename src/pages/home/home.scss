@@ -1,0 +1,80 @@
+@import "../../sass/variables";
+@import "../../sass/responsive";
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+
+        .logo {
+            width: 268px;
+            height: 64px;
+
+            @include lg {
+                width: 200px;
+                height: 40px;
+            }
+            
+        }
+
+        .cover {
+            width: 100%;
+            height: 700px;
+            position: relative;
+
+
+            @include lg {
+                height: 550px;
+            }
+
+            &__img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 12px;
+
+                @include lg {
+                    height: 450px;
+                }
+            }
+
+            &__txt {
+                box-shadow: $shadow-100;  
+                background-color: white;
+                height: 200px;
+                width: 600px;
+                position: absolute;
+                left: 3%;
+                bottom: 0;
+                border-radius: 12px;
+                padding: 40px;
+
+                @include lg {
+                    height: 150px;
+                    width: 450px;
+                    padding: 25px;
+                    bottom: 5%;
+                }
+                
+                p {
+                    font-family: $work-sans;
+                    font-size: 3.6rem;
+                    font-weight: 600;
+
+                    @include lg {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
