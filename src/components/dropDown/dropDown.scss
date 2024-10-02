@@ -14,10 +14,19 @@
         width: 250px;
         height: 250px;
     }
+
+    @include md {
+        width: 220px;
+    }
+
+    @include sm {
+        width: fit-content;
+        height: unset;
+    }
     
     &__label {
         font-size: $txt-black;
-        font-size: 1.6rem;
+        font-size: $txt-md;
     }
 
     &__select {
@@ -39,7 +48,7 @@
     }   
 
     &__arrow {
-        font-size: 2.8rem;
+        font-size: $txt-xl;
         transition: all .4s ease;
 
         &.open {

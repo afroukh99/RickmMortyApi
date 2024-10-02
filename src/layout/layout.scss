@@ -1,8 +1,9 @@
 @import "../sass/responsive";
 
 .layout {
-    min-height: 100vh;
+    height: 100%;
     .content {
+        height: 100%;
         margin-left: auto;
         margin-right: auto;
         padding: 20px;

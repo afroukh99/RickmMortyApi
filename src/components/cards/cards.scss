@@ -1,3 +1,6 @@
+@import "../../sass/responsive";
+
+
 .cards {
     width: 100%;
     display: flex;
@@ -12,5 +15,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
+
+        @include md {
+         justify-content: space-around;   
+        }
     }
 }

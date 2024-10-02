@@ -1,4 +1,7 @@
+
 @import "../../sass/variables";
+@import "../../sass/responsive";
+
 
 
 .pagination {
@@ -7,6 +10,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include sm {
+        justify-content: center;
+        gap: 10px;
+    }
+
 }
 
 
@@ -23,6 +32,12 @@
     font-weight: 600;
     cursor: pointer;
 
+
+    @include sm {
+        width: 30px;
+        height: 30px;
+        font-size: 1.6rem;
+    }
 
     &.active {
         border: 1px solid $light-green;

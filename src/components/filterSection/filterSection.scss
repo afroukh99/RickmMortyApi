@@ -1,6 +1,15 @@
+@import "../../sass/responsive";
+
+
 .filter {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include sm {
+        flex-direction: column;
+        justify-content: unset;
+        gap: 20px;
+    }
 }

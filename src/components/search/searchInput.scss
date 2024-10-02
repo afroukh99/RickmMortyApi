@@ -17,6 +17,16 @@
         width: 400px;
         height: 45px;
     }
+
+    @include md {
+        width: 350px;
+        height: 40px;
+    }
+
+    @include sm {
+        width: fit-content;
+        height: 40px;
+    }
     
     
 
@@ -28,11 +38,12 @@
 
         &::placeholder {
             color: $gray;
-            font-size: 1.8rem;
+            font-size: $txt-lg;
         }
     }
 
     &__icon {
+        font-size: $txt-lg;
 
     }
 }

@@ -3,7 +3,7 @@
 
 .card {
     width: 392px;
-    min-height: 600px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -16,15 +16,25 @@
         min-height: 450px;
     }
 
+    @include md {
+        width: 250px;
+        height: 250px;
+    }
+
+    @include sm {
+        width: fit-content;
+        height: fit-content;
+    }
+
     &__image {
-        object-fit: cover;
+        object-fit: fill;
         border-radius: 6px;
         width: 100%;
     }
 
 
     &__specie {
-        font-size: 1.4rem;
+        font-size: $txt-xs;
         background-color: $light-blue;
         width: 69px;
         padding: 5px;
@@ -39,7 +49,7 @@
         gap: 10px;
         
         span {
-            font-size: 2rem;
+            font-size: $txt-md;
             color: $txt-dark;
             font-weight: 600;
         }
