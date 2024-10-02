@@ -2,8 +2,11 @@
 
 .layout {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+
     .content {
-        height: 100%;
         margin-left: auto;
         margin-right: auto;
         padding: 20px;

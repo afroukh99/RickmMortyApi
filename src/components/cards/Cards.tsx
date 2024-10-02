@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useFetch } from '../../hooks/useFetch'
 import Card from '../card/Card';
 import PaginationBar from '../paginationBar/PaginationBar';
 import "./cards.scss"
+import { FilterContext } from '../../context/FilterContext';
 
 
 
 
 const Cards = () => {
-  const [pageNumber , setPageNumber] = useState(1);
-  const Characters = useFetch(`https://rickandmortyapi.com/api/character/?page=${pageNumber}`).slice(0, 9)
+  const { filterItems } = useContext(FilterContext)
+  const { pageNumber, name , species, gender, status } = filterItems;
+  const Characters = useFetch(`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${name}&species=${species}&gender=${gender}&status=${status}`)
+    .slice(0, 9)
   return (
     <div className='cards'>
       <div className="cards-container">
@@ -20,7 +23,7 @@ const Cards = () => {
           ))
         }
       </div>
-      <PaginationBar setPageNumber = {setPageNumber} />
+      <PaginationBar />
 
     </div>
   )

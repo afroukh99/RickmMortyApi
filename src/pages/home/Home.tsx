@@ -1,9 +1,14 @@
+import { useState } from "react"
 import Cards from "../../components/cards/Cards"
 import FilterSection from "../../components/filterSection/FilterSection"
 import SearchInput from "../../components/search/SearchInput"
 import "./home.scss"
+import { useFetch } from "../../hooks/useFetch"
 
 const Home = () => {
+
+
+
   return (
     <div className='home'>
       <header>
@@ -15,7 +20,7 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <SearchInput />
+      <SearchInput  />
       <FilterSection />
       <section className="characters">
         <h1 className="characters__title">Meet the Wildest Characters <br />

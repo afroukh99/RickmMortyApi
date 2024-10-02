@@ -78,26 +78,32 @@
                 padding: 40px;
 
                 @include lg {
-                    height: 150px;
+                    height: 140px;
                     width: 450px;
                     padding: 25px;
                     bottom: 5%;
                 }
 
                 @include md {
-                    height: 100px;
+                    height: 120px;
                     width: 400px;
                     padding: 25px;
                     bottom: 10%;
                     left: 3%;
+                }
+
+                @include sm {
+                    height: 80px;
+                    width: 250px;
+                    padding: 10px;
+                    left: 12%;
+                    bottom: 12%;
                 }
                 
                 p {
                     font-family: $work-sans;
                     font-size: $txt-xl;
                     font-weight: 600;
-
-                  
                 }
             }
         }

@@ -17,6 +17,7 @@ export const useFetch = (url: string ) => {
                 gender: "Unknown"
             }]);
 
+            console.log(url)
 
     useEffect(() => {
         const fetchData = async () => {
