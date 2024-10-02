@@ -1,0 +1,134 @@
+@import "../../sass/variables";
+@import "../../sass/responsive";
+
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: $work-sans;
+    margin-bottom: 100px;
+
+    @include lg {
+        gap: 20px;
+    }
+
+    @include md {
+    }
+
+    @include sm {
+    }
+
+
+    &__logo {
+        width: 268px;
+        height: 65px;
+
+        @include md {
+            width: 200px;
+            height: 45px;
+        }
+
+        @include sm {
+            width: 150px;
+            height: 45px;
+        }
+
+    }
+
+    &__title {
+        font-size: $txt-xl;
+    }
+
+    &__card {
+        max-width: 1017px;
+        height: 500px;
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+        box-shadow: $shadow;
+        border-radius: 15px;
+
+
+        @include lg {
+            width: 800px;
+            height: 350px;
+            gap: 20px;
+        }
+
+        @include md {
+            width: 650px;
+            height: 300px;
+            gap: 2px;
+        }
+
+        @include sm {
+            width: fit-content;
+            height: 600px;
+            gap: 5px;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+
+        &__img {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 8px;
+
+            @include sm {
+                flex: 2;
+            }
+        }
+
+        &__infos {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+            &__container {
+                height: 100%;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                @include sm {
+                    width: 100%;
+                    justify-content: unset;
+                    gap: 10px;
+                    justify-content: center;
+                    padding: 10px;
+                }
+                
+            }
+
+            &__title {
+                font-size: $txt-3xl;
+                font-family: $jim-nightshade;
+                color: $green;
+                text-align: center;
+            }
+
+            ul {
+                font-size: $txt-lg;
+                color: black;
+                font-weight: 600;
+                padding: 0 20px;
+            }
+
+            &__about {
+                font-size: $txt-lg;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .inner-txt {
+        color: $green;
+    }
+}

@@ -1,3 +1,5 @@
+import Cards from "../../components/cards/Cards"
+import FilterSection from "../../components/filterSection/FilterSection"
 import SearchInput from "../../components/search/SearchInput"
 import "./home.scss"
 
@@ -13,8 +15,14 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <SearchInput/>
-      
+      <SearchInput />
+      <FilterSection />
+      <section className="characters">
+        <h1 className="characters__title">Meet the Wildest Characters <br />
+          from the Rick and Morty Multiverse!</h1>
+          <Cards/>
+      </section>
+
     </div>
   )
 }

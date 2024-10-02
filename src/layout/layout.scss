@@ -20,12 +20,10 @@
 
         @include md {
             max-width: 780px;
-            background-color: saddlebrown;
         }
 
         @include sm {
             max-width: 640px;
-            background-color: wheat;
         }
     }
 
