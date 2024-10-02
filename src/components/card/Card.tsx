@@ -1,9 +1,11 @@
 import React from 'react'
 import { Character } from '../../types/types'
 import "./card.scss"
+import { Link, useNavigate } from 'react-router-dom'
 
 const Card = (Character: Character) => {
   return (
+    <Link to={`details/${Character.id}`}>
     <div className='card'>
       <img src={Character.image} alt="" className="card__image" />
       <span className='card__specie'>{Character.species}</span>
@@ -14,6 +16,7 @@ const Card = (Character: Character) => {
       </div>
       <span className='card__details'>Details</span>
     </div>
+    </Link>
   )
 }
 

@@ -1,27 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./singlrPage.scss"
+import { useFetch } from '../../hooks/useFetch'
+import { Character } from '../../types/types';
+import axios from 'axios';
+import { Link, useParams } from 'react-router-dom';
 
 const SinglePage = () => {
+
+  const [data, setData] = useState<any>({});
+  const pathName = useParams()
+
+      const url =`https://rickandmortyapi.com/api/character/${pathName.id}`
+
+      useEffect(() => {
+        const fetchData = async () => {
+            const res = await axios.get(url);
+            setData(res.data)
+        }
+        fetchData()
+    }, [pathName.id]);
+
+
+
   return (
     <div className='details'>
-      <img src="/images/logo.png" alt="" className="details__logo" />
+      <Link to={"/"}>
+        <img src="/images/logo.png" alt="" className="details__logo" />
+      </Link>
       <h1 className="details__title">
-        Discover the Secrets of Rick Sanchez <br /> from the Rick and Morty Universe!" 🧬🚀
+        Discover the Secrets of {data.name} <br /> from the Rick and Morty Universe!" 🧬🚀
       </h1>
       <section className='details__card'>
-        <img className='details__card__img' src="/images/rick.png" alt="" />
+        <img className='details__card__img' src={data.image} alt="" />
         <div className="details__card__infos">
           <div className="details__card__infos__container">
-            <h1 className="details__card__infos__title">Rick Sanchez</h1>
+            <h1 className="details__card__infos__title">{data.name}</h1>
             <ul className=''>
-              <li>Status : Alive</li>
-              <li>Species : Human</li>
-              <li>Gender : Male</li>
+              <li>Status : {data.status}</li>
+              <li>Species : {data.species}</li>
+              <li>Gender : {data.gender}</li>
             </ul>
             <p className='details__card__infos__about'>
-              <span className="inner-txt">Rick Sanchez </span> is a <span className='inner-txt'>Male Human </span>
-              who is currently <span className="inner-txt">Alive</span>
-              . He remains a core figure in the <span className="inner-txt">human</span> species.
+              <span className="inner-txt">{data.name} </span> is a <span className='inner-txt'>{data.gender} {data.species} </span>
+              who is currently <span className="inner-txt">{data.status}</span>
+              . He remains a core figure in the <span className="inner-txt">{data.species}</span> species.
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const PaginationBar = () => {
       pageCount={29}
       previousLabel="<"
       renderOnZeroPageCount={null}
-      pageClassName="page-item"
+      pageClassName="page-links"
       pageLinkClassName="page-link"
       previousClassName="page-item"
       previousLinkClassName="page-link"

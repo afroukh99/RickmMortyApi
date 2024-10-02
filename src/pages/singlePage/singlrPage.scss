@@ -25,6 +25,7 @@
     &__logo {
         width: 268px;
         height: 65px;
+        cursor: pointer;
 
         @include md {
             width: 200px;

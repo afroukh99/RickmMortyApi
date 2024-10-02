@@ -7,7 +7,6 @@ import axios from "axios";
 export const useFetch = (url: string ) => {
     const [data, setData] = useState<Character[]>(
         [
-
             {
                 id: 0,
                 name: "",
@@ -16,8 +15,6 @@ export const useFetch = (url: string ) => {
                 status: "Unknown",
                 gender: "Unknown"
             }]);
-
-            console.log(url)
 
     useEffect(() => {
         const fetchData = async () => {
