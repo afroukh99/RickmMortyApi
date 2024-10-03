@@ -4,7 +4,6 @@ import Card from '../card/Card';
 import PaginationBar from '../paginationBar/PaginationBar';
 import "./cards.scss"
 import { FilterContext } from '../../context/FilterContext';
-import { Character } from '../../types/types';
 
 
 
@@ -23,6 +22,7 @@ const Cards = () => {
             <Card key={Character?.id}  {...Character} />
           ))
         }
+        
       </div>
       <PaginationBar />
 

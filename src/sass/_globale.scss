@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    height: --webkit-fill-available;
 }
 
 
@@ -14,6 +15,8 @@ html {
 
 body {
     font-size: 1.6rem;
+    height: --webkit-fill-available;
+
 }
 
 

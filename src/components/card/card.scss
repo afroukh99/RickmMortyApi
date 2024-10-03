@@ -17,8 +17,8 @@
     }
 
     @include md {
-        width: 250px;
-        height: 250px;
+        max-width: fit-content;
+        height: fit-content;
     }
 
     @include sm {
