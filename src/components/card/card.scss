@@ -22,7 +22,7 @@
     }
 
     @include sm {
-        width: fit-content;
+        max-width: fit-content;
         height: fit-content;
     }
 
@@ -47,7 +47,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+
         span {
             font-size: $txt-md;
             color: $txt-dark;

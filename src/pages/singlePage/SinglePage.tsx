@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import "./singlrPage.scss"
-import { useFetch } from '../../hooks/useFetch'
-import { Character } from '../../types/types';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 

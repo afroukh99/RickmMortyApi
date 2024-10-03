@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import ReactPaginate from 'react-paginate'
 import "./paginationBar.scss"
 import { FilterContext } from '../../context/FilterContext'

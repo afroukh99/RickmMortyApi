@@ -14,7 +14,9 @@ export const useFetch = (url: string ) => {
                 image: "",
                 status: "Unknown",
                 gender: "Unknown"
-            }]);
+            }
+        ]
+        );
 
     useEffect(() => {
         const fetchData = async () => {

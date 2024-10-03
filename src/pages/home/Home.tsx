@@ -1,9 +1,7 @@
-import { useState } from "react"
 import Cards from "../../components/cards/Cards"
 import FilterSection from "../../components/filterSection/FilterSection"
 import SearchInput from "../../components/search/SearchInput"
 import "./home.scss"
-import { useFetch } from "../../hooks/useFetch"
 
 const Home = () => {
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import "./filterSection.scss";
 import DropDown from '../dropDown/DropDown';
 
