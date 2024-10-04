@@ -67,7 +67,7 @@
 
         @include sm {
             width: fit-content;
-            height: 600px;
+            min-height: fit-content;
             gap: 5px;
             padding: 10px;
             flex-direction: column;

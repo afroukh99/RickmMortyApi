@@ -8,11 +8,16 @@
     align-items: center;
     justify-content: center;
     background-color: $bg-gray;
-
+    
+    
     @include lg {
         height: 120px;
     }
-
+    
+    @include md {
+        padding: 20px;
+    }
+    
     &__logo {
         width: 268px;
         height: 64px;

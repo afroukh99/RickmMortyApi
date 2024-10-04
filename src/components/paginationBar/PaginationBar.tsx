@@ -1,13 +1,21 @@
-import  { useContext } from 'react'
+import  { useContext, useState } from 'react'
 import ReactPaginate from 'react-paginate'
 import "./paginationBar.scss"
 import { FilterContext } from '../../context/FilterContext'
+
+
+
+
 
 const PaginationBar = () => {
   const { setFilterItems } = useContext(FilterContext)
   const handleClick = (data: any) => {
     setFilterItems((prev) => ({ ...prev, pageNumber: data.selected + 1 }))
   }
+
+ 
+  
+
   return (
     <ReactPaginate
       nextLabel=">"
@@ -27,8 +35,10 @@ const PaginationBar = () => {
       breakLinkClassName="page-link"
       containerClassName="pagination"
       breakLabel="..."
-    />
-  )
-}
+      />
+    )
+  }
 
-export default PaginationBar
+
+  
+  export default PaginationBar

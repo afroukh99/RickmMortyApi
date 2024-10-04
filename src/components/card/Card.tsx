@@ -19,4 +19,5 @@ const Card = (Character: Character) => {
   )
 }
 
+
 export default Card
